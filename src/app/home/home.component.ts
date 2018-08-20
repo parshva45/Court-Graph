@@ -1,8 +1,7 @@
-require('chartjs-plugin-zoom');
-
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { CourtServiceClient } from '../services/court.service.client';
+import 'chartjs-plugin-zoom';
 
 @Component({
   selector: 'app-home',
