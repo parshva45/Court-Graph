@@ -1,3 +1,73 @@
-<div>
-  <canvas id="lineChart"></canvas>
+<div class="container-fluid">
+
+  <div class="form-group">
+    <label>View kWh pattern for which month of 2014?</label>
+    <select [(ngModel)]="kWhMonth"
+            (ngModelChange)="loadKWHChart()"
+            class="form-control"
+            style="width: 50%">
+      <option [ngValue]="1">January</option>
+      <option [ngValue]="2">February</option>
+      <option [ngValue]="3">March</option>
+      <option [ngValue]="4">April</option>
+      <option [ngValue]="5">May</option>
+      <option [ngValue]="6">June</option>
+      <option [ngValue]="7">July</option>
+      <option [ngValue]="8">August</option>
+      <option [ngValue]="9">September</option>
+      <option [ngValue]="10">October</option>
+      <option [ngValue]="11">November</option>
+      <option [ngValue]="12">December</option>
+    </select>
+  </div>
+
+  <div>
+    <canvas id="kWhChart"></canvas>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <canvas id="kWhDoughnut"></canvas>
+    </div>
+    <div class="col-6">
+      <canvas id="kWhPie"></canvas>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-group">
+    <label>View Power Factor pattern for which month of 2014?</label>
+    <select [(ngModel)]="powerFactorMonth"
+            (ngModelChange)="loadPowerFactorChart()"
+            class="form-control"
+            style="width: 50%">
+      <option [ngValue]="1">January</option>
+      <option [ngValue]="2">February</option>
+      <option [ngValue]="3">March</option>
+      <option [ngValue]="4">April</option>
+      <option [ngValue]="5">May</option>
+      <option [ngValue]="6">June</option>
+      <option [ngValue]="7">July</option>
+      <option [ngValue]="8">August</option>
+      <option [ngValue]="9">September</option>
+      <option [ngValue]="10">October</option>
+      <option [ngValue]="11">November</option>
+      <option [ngValue]="12">December</option>
+    </select>
+  </div>
+
+  <div>
+    <canvas id="powerFactorChart"></canvas>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <canvas id="powerFactorDoughnut"></canvas>
+    </div>
+    <div class="col-6">
+      <canvas id="powerFactorPie"></canvas>
+    </div>
+  </div>
+
 </div>
